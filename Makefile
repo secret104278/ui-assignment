@@ -8,5 +8,8 @@ database:
 		-d \
 		postgres:13.3-alpine
 
+table:
+	cat init-users-table.sh | docker exec -i postgres sh
+
 clean:
 	docker rm -f postgres
